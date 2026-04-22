@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="nav-bar">
+        <div class="left-nav">
+            <a class="logo">Logo</a>
+        </div>
+        <div class="center-nav">
+            <a class="custom-btn center-btn" id="custom-btn" href="#customization">Customization</a>
+            <a class="price-btn center-btn" id="price-btn" href="#prices">Prices</a>
+            <a class="contact-btn center-btn" id="contact-btn" href="#contacts">Contacts</a>
+        </div>
+        <div class="right-nav">
+            <button class="log-in-btn" id="log-in-btn">Log in</button>
+            <button class="sign-up-btn" id="sign-up-btn">Sign up</button>
+        </div>
+    </nav>
+    <main>
+        <div class="hero">
+            <div class="hero-text">
+                <p>Book Your Appointment Online</p>
+                <p>Schedule your consultation in just a few clicks. Choose a convenient date and time, and we’ll take care of the rest.</p>
+                <p>Fast, simple, and reliable booking experience.</p>
+            </div>
+            <div class="hero-btns">
+                <button class="get-started hero-btn" id="started">Get started<span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" 
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H9M17 7V15" 
+                                    stroke="currentColor" 
+                                    stroke-width="2" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round"/>
+                              </svg></button>
+                <button class="log-in-menu hero-btn">I already have account<span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" 
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7M17 7H9M17 7V15" 
+                                    stroke="currentColor" 
+                                    stroke-width="2" 
+                                    stroke-linecap="round" 
+                                    stroke-linejoin="round"/>
+                              </svg></button>
+            </div>
+            <a class="book-container" href="" target="_blank" rel="noreferrer noopener">
+                <div class="book">
+                    <img alt="George Orwell" src="https://m.media-amazon.com/images/I/612ADI+BVlL._SL1500_.jpg"/>
+                </div>
+            </a>
+        </div>
+        <div class="brands-wrapper">
+            <div class="brands-track">
+            <span>BookNest</span>
+            <span>PageFlow</span>
+            <span>InkHouse</span>
+            <span>ShelfSpace</span>
+            <span>Readora</span>
+            <span>Leaf & Letter</span>
+            <span>StoryHub</span>
+            <span>Boundless Books</span>
+
+            <span>BookNest</span>
+            <span>PageFlow</span>
+            <span>InkHouse</span>
+            <span>ShelfSpace</span>
+            <span>Readora</span>
+            <span>Leaf & Letter</span>
+            <span>StoryHub</span>
+            <span>Boundless Books</span>
+        </div>
+
+            <div class="brands-note">
+                * It`s not real names
+            </div>
+        </div>
+        <div class="customization" id="customization">
+            <div class="customization-wrapper">
+                <div class="controls">
+                    <label>
+                        Front
+                        <input type="color" id="frontColor">
+                    </label>
+
+                    <label>
+                        Back
+                        <input type="color" id="backColor">
+                    </label>
+
+                    <label>
+                        Spine
+                        <input type="color" id="spineColor">
+                    </label>
+                </div>
+                <a class="book-container customization-book" target="_blank" rel="noreferrer noopener">
+                    <div class="book-3d">
+                        <div class="book-inner">
+                            <div class="face front"><div class="book-title"></div></div>
+                            <div class="face back"></div>
+                            <div class="face left"></div>
+                            <div class="face top"></div>
+                            <div class="face bottom"></div>
+                            <div class="pages"></div>
+                        </div>
+                    </div>
+                </a>
+                <div class="book-list">
+                    <img src="book1.jpg" class="book-option" data-cover="book1.jpg" data-title="1984">
+                    <img src="book2.jpg" class="book-option" data-cover="book2.jpg" data-title="The Little Prince">
+                    <img src="book3.jpg" class="book-option" data-cover="book3.jpg" data-title="Jurassic Park">
+                    <img src="book4.jpg" class="book-option" data-cover="book4.jpg" data-title="The Da Vinci Code">
+                    <img src="book5.jpg" class="book-option" data-cover="book5.jpg" data-title="Life of Pi">
+                </div>
+                <button id="titleToggle" class="title-toggle">Show Title</button>
+            </div>
+        </div>
+        <div class="prices" id="prices">
+            <div class="price-card" id="free">
+                <h2>Free</h2>
+                <p class="price">$0</p>
+                <p class="desc">Read online instantly</p>
+                <p class="sub">One-time access • No downloads</p>
+                <button class="card-btn free-btn">Start Reading</button>
+            </div>
+            <div class="price-card" id="rent">
+                <h2>Rent<span class="badge">Popular</span></h2>
+                <p class="price">$4.99</p>
+                <p class="desc">Full access for 7 days</p>
+                <p class="sub">Read anytime • Save your progress</p>
+                <button class="card-btn">Rent Now</button>
+            </div>
+            <div class="price-card" id="buy">
+                <h2>Buy</h2>
+                <p class="price">$12.99</p>
+                <p class="desc">Unlimited lifetime access</p>
+                <p class="sub">Download & keep forever</p>
+                <button class="card-btn">Buy Now</button>
+            </div>
+        </div>
+        <div class="contacts" id="contacts">
+            <a href="https://olehwebdevelop.github.io/Portfolio/">© 2026 Oleh K.</a>
+            <a href="https://olehwebdevelop.github.io/Portfolio/">Designed & Built by Me</a>
+        </div>
+    </main>
+<script src="script.js"></script>
+</body>
+</html>
