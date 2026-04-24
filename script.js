@@ -103,3 +103,57 @@ titleToggle.addEventListener("click", () => {
         frontFace.style.backgroundImage = `url(${currentCover})`;
     }
 });
+
+const registerDiv = document.getElementById("sign-up-menu");
+const loginDiv = document.getElementById("log-in-menu");
+
+const signUpBtn = document.getElementById("sign-up-btn");
+const logInBtn = document.getElementById("log-in-btn");
+
+signUpBtn.addEventListener('click', () => {
+  registerDiv.classList.add('active');
+  loginDiv.classList.remove('active');
+});
+
+logInBtn.addEventListener('click', () => {
+  loginDiv.classList.add('active');
+  registerDiv.classList.remove('active');
+});
+
+const cancelRegister = document.getElementById("cancelSignUp");
+const cancelLogin = document.getElementById("cancelLogIn");
+
+cancelRegister.addEventListener('click', () => {
+  registerDiv.classList.remove('active');
+});
+
+cancelLogin.addEventListener('click', () => {
+  loginDiv.classList.remove('active');
+});
+
+const logInLink = document.getElementById("log-in-a");
+logInLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  registerDiv.classList.remove('active');
+  loginDiv.classList.add('active');
+});
+
+const createLink = document.getElementById("sign-up-a");
+createLink.addEventListener('click', (e) => {
+  e.preventDefault();
+  loginDiv.classList.remove('active');
+  registerDiv.classList.add('active');
+});
+
+const heroStartBtn = document.getElementById("started");
+const heroLoginBtn = document.getElementById("hero-login");
+
+heroStartBtn.addEventListener('click', () => {
+  registerDiv.classList.add('active');
+  loginDiv.classList.remove('active');
+});
+
+heroLoginBtn.addEventListener('click', () => {
+  loginDiv.classList.add('active');
+  registerDiv.classList.remove('active');
+});
