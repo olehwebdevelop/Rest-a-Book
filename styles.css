@@ -597,13 +597,12 @@ body {
     height: 50vh;
     border-radius: 14px;
     background-color: var(--background4);
-    transition: background 0.3s, width 0.3s, height 0.3s;
+    transition: background 0.3s, transform 0.3s;
 }
 
 .price-card:hover {
     background-color: var(--hover2);
-    width: 32%;
-    height: 52vh;
+    transform: scale(1.03);
 }
 
 .price-card > h2 {
@@ -820,4 +819,284 @@ body {
     cursor: pointer;
     font-size: larger;
     color: var(--background3);
+}
+
+@media (max-width: 1024px) {
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .center-nav {
+        display: none;
+    }
+
+    .right-nav {
+        position: static;
+        transform: none;
+        margin-left: auto;
+    }
+
+    .hero {
+        width: 95%;
+        min-height: 85vh;
+        height: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .hero-text {
+        width: 80%;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero-btns {
+        left: 50%;
+        transform: translateX(-50%);
+        justify-content: center;
+    }
+
+    .book-container {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .brands-wrapper {
+        position: relative;
+        top: auto;
+        margin-top: 30px;
+    }
+
+    .customization,
+    .customization-wrapper {
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .prices {
+        position: relative;
+        top: auto;
+        margin-top: 80px;
+    }
+
+    .contacts {
+        position: relative;
+        top: auto;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .nav-bar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 10px 15px;
+    }
+
+    .right-nav {
+        margin-left: auto;
+        border: none;
+        padding: 0;
+    }
+
+    .hero {
+        position: relative;
+        width: 100%;
+        min-height: 80vh;
+        height: auto;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-text {
+        position: relative;
+        transform: none;
+        left: auto;
+        top: auto;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .hero-btns {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .book-container {
+        position: relative !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: auto !important;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .book {
+        transform: rotateY(-20deg) scale(0.85);
+    }
+
+    .book-container:hover .book {
+        transform: rotateY(0deg) scale(0.85);
+    }
+
+    .brands-wrapper {
+        position: relative !important;
+        top: auto !important;
+        margin-top: 30px;
+    }
+
+    .customization {
+        position: relative !important;
+        top: auto !important;
+        height: auto;
+        padding: 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .customization-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        max-width: 100%;
+        overflow: hidden;
+    }
+
+    .customization-book {
+        position: relative !important;
+        transform: none !important;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 0 !important;
+        top: auto !important;
+    }
+
+    .book-inner {
+        position: relative !important;
+        left: auto !important;
+        transform: rotateY(-25deg) rotateX(10deg) !important;
+    }
+
+    .book-3d {
+        transform: scale(0.85);
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .controls {
+        position: relative !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        top: auto !important;
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .book-list {
+        position: relative !important;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .book-option {
+        width: 50px;
+        height: 75px;
+    }
+
+    .title-toggle,
+    .book-title {
+        position: relative !important;
+        transform: none !important;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .prices {
+        position: relative;
+        top: auto;
+        margin-top: 60px;
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+    }
+
+    .price-card {
+        width: 90%;
+    }
+
+    .contacts {
+        position: relative;
+        top: auto;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    .hero-text {
+        font-size: 14px;
+    }
+
+    .hero-btn {
+        font-size: 12px;
+    }
+
+    .book {
+        width: 120px;
+        height: 180px;
+    }
+
+    .price-card {
+        width: 95%;
+    }
+
+    .card-btn {
+        top: 40%;
+    }
 }
