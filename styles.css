@@ -305,14 +305,14 @@ body {
 
 .brands-wrapper {
     display: flex;
-    position: absolute;
-    top: 80vh;
+    align-items: center;
+    position: relative;
     width: 100%;
-    height: 10vh;
+    height: 12vh;
     border: 2px solid var(--background1);
     overflow: hidden;
-    padding: 20px 0 40px;
-    position: relative;
+    padding: 20px 0;
+    top: 80vh;
 }
 
 .brands-track {
@@ -320,6 +320,7 @@ body {
     gap: 60px;
     width: max-content;
     animation: scroll 20s linear infinite;
+    padding-left: 60px;
 }
 
 .brands-track span {
@@ -329,10 +330,15 @@ body {
     font-weight: 500;
     cursor: pointer;
     transition: color 0.3s;
+    flex-shrink: 0;
 }
 
 .brands-track span:hover {
     color: var(--hover2);
+}
+
+.brands-track:hover {
+    animation-play-state: paused;
 }
 
 @keyframes scroll {
@@ -351,7 +357,9 @@ body {
     transform: translateX(-50%);
     font-size: 14px;
     color: var(--hover1);
+    white-space: nowrap;
 }
+
 
 .customization {
     display: flex;
