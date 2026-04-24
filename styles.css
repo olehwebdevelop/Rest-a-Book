@@ -45,7 +45,18 @@ body {
 
 .logo {
     font-size: larger;
+    font-weight: 800;
+    color: var(--color1);
     cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo:hover svg {
+  transform: scale(1.1);
+  transition: 0.3s;
 }
 
 .center-nav {
@@ -683,4 +694,122 @@ body {
 
 .contacts > a {
     text-decoration: none;
+}
+
+.sign-up-menu {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s;
+}
+
+.log-in-menu {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.1s;
+}
+
+.sign-up-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.log-in-menu.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.account {
+    width: 40vh;
+    height: auto;
+    min-height: 30vh;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    background-color: var(--background4);
+    color: var(--color1);
+    z-index: 100;
+    border: 2px solid var(--background1);
+    border-radius: 8px;
+    gap: 16px;
+    box-sizing: border-box;
+}
+
+.account-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    color: var(--background5);
+}
+
+.account-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    border-radius: 5px;
+    gap: 12px;
+    margin-top: 30%;
+    padding: 1vh;
+    background-color: var(--background1);
+}
+
+.account-container label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    color: var(--text1);
+}
+
+.account-container input {
+    margin-top: 4px;
+    padding: 6px 8px;
+    border: 1px solid var(--background1);
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.account-btn {
+    padding: 8px 12px;
+    border: none;
+    background-color: var(--background5);
+    color: white;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.account-btn:hover {
+    background-color: var(--hover3);
+}
+
+.account-a {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--background5);
+    cursor: pointer;
+    margin-top: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.account-a:hover {
+    color: var(--hover3);
+}
+
+.cancel {
+    display: flex;
+    position: absolute;
+    top: 1vh;
+    right: 1.5vh;
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    font-size: larger;
+    color: var(--background3);
 }
