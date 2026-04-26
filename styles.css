@@ -63,7 +63,7 @@ body {
     display: flex;
     position: absolute;
     gap: 8px;
-    left: 70%;
+    left: 68%;
     transform: translateX(-50%);
 }
 
@@ -821,14 +821,10 @@ body {
     color: var(--background3);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
 
     html, body {
         overflow-x: hidden;
-    }
-
-    .center-nav {
-        display: none;
     }
 
     .right-nav {
@@ -885,6 +881,10 @@ body {
         margin-top: 80px;
     }
 
+    .card-btn {
+        top: 38%;
+    }
+
     .contacts {
         position: relative;
         top: auto;
@@ -892,10 +892,14 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
 
     html, body {
         overflow-x: hidden;
+    }
+
+    .center-nav {
+        display: none;
     }
 
     .nav-bar {
@@ -1002,9 +1006,29 @@ body {
     }
 
     .book-inner {
-        position: relative !important;
-        left: auto !important;
-        transform: rotateY(-25deg) rotateX(10deg) !important;
+        position: relative;
+        left: auto;
+        transform: rotateY(-25deg) rotateX(10deg);
+        touch-action: none;
+    }
+
+    .book-3d,
+    .book-inner,
+    .face,
+    .pages {
+        pointer-events: none;
+    }
+
+    .book-inner {
+        pointer-events: auto;
+    }
+
+    .customization-book {
+        pointer-events: none;
+    }
+
+    .book-inner {
+        pointer-events: auto;
     }
 
     .book-3d {
@@ -1051,6 +1075,11 @@ body {
         transform: none !important;
         margin-top: 10px;
         text-align: center;
+    }
+
+    .book-title {
+        left: 0;
+        margin-top: 0;
     }
 
     .prices {
