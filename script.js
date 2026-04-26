@@ -22,19 +22,26 @@ let lastY = 0;
 let rotY = -25;
 let rotX = 10;
 
-book.addEventListener("mousedown", (e) => {
+book.addEventListener("pointerdown", (e) => {
     if (e.target.closest(".controls") || e.target.closest(".book-option")) return;
 
     isDragging = true;
     lastX = e.clientX;
     lastY = e.clientY;
+
+    book.setPointerCapture(e.pointerId);
 });
 
-document.addEventListener("mouseup", () => {
+book.addEventListener("pointerup", (e) => {
+    isDragging = false;
+    book.releasePointerCapture(e.pointerId);
+});
+
+book.addEventListener("pointerleave", () => {
     isDragging = false;
 });
 
-document.addEventListener("mousemove", (e) => {
+book.addEventListener("pointermove", (e) => {
     if (!isDragging) return;
 
     const dx = e.clientX - lastX;
@@ -42,6 +49,8 @@ document.addEventListener("mousemove", (e) => {
 
     rotY += dx * 0.5;
     rotX -= dy * 0.5;
+
+    rotX = Math.max(-45, Math.min(45, rotX));
 
     book.style.transform = `rotateY(${rotY}deg) rotateX(${rotX}deg)`;
 
