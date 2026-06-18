@@ -6,7 +6,21 @@ const cors = require("cors");
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+const allowedOrigins = [
+    "https://olehwebdevelop.github.io",
+    "http://localhost:5000"
+];
+
+app.use(cors({
+    origin: function (origin, callback) {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error("Blocked by CORS"));
+        }
+    },
+    credentials: true
+}));
 app.use(express.static(__dirname));
 
 const users = []; 
