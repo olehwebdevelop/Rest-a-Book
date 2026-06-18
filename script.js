@@ -2,7 +2,7 @@ const frontColorInput = document.getElementById("frontColor");
 const back = document.getElementById("backColor");
 const spine = document.getElementById("spineColor");
 
-const API_URL = "https://srv-d8ptuq6rnols73bo5pb0.onrender.com";
+const API_URL = "https://rest-a-book.onrender.com;
 
 if (frontColorInput) {
     frontColorInput.addEventListener("input", (e) => {
